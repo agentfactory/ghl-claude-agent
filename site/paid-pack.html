@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The $97 Agent Pack - Claude Academy</title>
+  <meta name="description" content="Pre-built Claude agent configs, 20 ready-to-use prompts, and a quickstart checklist for GHL.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a href="index.html" class="topbar-brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      Claude Academy
+    </a>
+  </div>
+  <div class="topbar-right">
+    <a href="https://skool.com/claude-academy" class="topbar-link" target="_blank" rel="noopener">Community</a>
+    <a href="https://skool.com/claude-academy/paid" class="topbar-cta" target="_blank" rel="noopener">Get the $97 Pack</a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar" id="sidebar">
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Start Here</div>
+    <a href="index.html" class="sidebar-link" data-page="index">Welcome</a>
+    <a href="quickstart.html" class="sidebar-link" data-page="quickstart">Quickstart</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Understand the Setup</div>
+    <a href="what-is-mcp.html" class="sidebar-link" data-page="what-is-mcp">What is MCP?</a>
+    <a href="ghl-agent.html" class="sidebar-link" data-page="ghl-agent">What Claude Can Do in GHL</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Step-by-Step Setup</div>
+    <a href="step-1-pit.html" class="sidebar-link" data-page="step-1-pit">Step 1: Create Your PIT Token</a>
+    <a href="step-2-location.html" class="sidebar-link" data-page="step-2-location">Step 2: Find Your Location ID</a>
+    <a href="step-3-connect.html" class="sidebar-link" data-page="step-3-connect">Step 3: Connect Claude to GHL</a>
+    <a href="step-4-test.html" class="sidebar-link" data-page="step-4-test">Step 4: Run Your First Test</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Use Cases</div>
+    <a href="lead-qualifier.html" class="sidebar-link" data-page="lead-qualifier">Lead Qualifier</a>
+    <a href="follow-up.html" class="sidebar-link" data-page="follow-up">Follow-Up Writer</a>
+    <a href="pipeline-mover.html" class="sidebar-link" data-page="pipeline-mover">Pipeline Manager</a>
+    <a href="appointment.html" class="sidebar-link" data-page="appointment">Appointment Setter</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Join the Community</div>
+    <a href="community.html" class="sidebar-link" data-page="community">Community</a>
+    <a href="paid-pack.html" class="sidebar-link active" data-page="paid-pack">The $97 Agent Pack</a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="content">
+
+
+    <h1>The Claude Academy Agent Pack</h1>
+
+    <p>You know how to connect Claude to GHL. This pack gives you everything you need to actually put it to work.</p>
+
+    <h2>What Is Inside</h2>
+
+    <h3>4 Pre-Built Agent Configurations</h3>
+
+    <p>Ready-to-paste system prompts for the four most common GHL workflows. Each one turns Claude into a specialized agent for a specific job:</p>
+
+    <table>
+      <thead>
+        <tr><th>Agent</th><th>What It Does</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Lead Qualifier</strong></td><td>Pulls new contacts, assesses them against your criteria, tags them Hot/Warm/Cold, and adds summary notes</td></tr>
+        <tr><td><strong>Follow-Up Writer</strong></td><td>Reads conversation history and drafts personalized messages in your voice</td></tr>
+        <tr><td><strong>Pipeline Manager</strong></td><td>Reviews your pipeline stages, finds stalled deals, moves them, and generates reports</td></tr>
+        <tr><td><strong>Appointment Setter</strong></td><td>Checks calendar availability, books meetings, and handles rescheduling</td></tr>
+      </tbody>
+    </table>
+
+    <p>Each configuration includes placeholder variables you fill in once. After that, the agent works with your specific account, your tags, your pipeline names, and your preferences.</p>
+
+    <h3>20 Ready-to-Use Prompts</h3>
+
+    <p>A prompt library organized by GHL function:</p>
+
+    <ul>
+      <li><strong>Contacts:</strong> Create, search, tag, update, and merge contacts (5 prompts)</li>
+      <li><strong>Conversations:</strong> Summarize threads, draft replies, flag urgent, archive old (4 prompts)</li>
+      <li><strong>Pipeline:</strong> Move stages, list stalled, generate reports, bulk tag (4 prompts)</li>
+      <li><strong>Calendar:</strong> Check availability, book, reschedule, cancel (4 prompts)</li>
+      <li><strong>Reporting:</strong> Weekly pipeline summary, lead source breakdown, team activity (3 prompts)</li>
+    </ul>
+
+    <p>Every prompt includes placeholders and a description of what Claude will return.</p>
+
+    <h3>Quick-Start Checklist</h3>
+
+    <p>A single-page checklist covering:</p>
+
+    <ul>
+      <li>Pre-flight checks (account type, access level)</li>
+      <li>Setup steps (token, Location ID, connection)</li>
+      <li>Agent deployment (paste the config, name it, test it)</li>
+      <li>Go-live steps (permission review, backup workflow setup)</li>
+    </ul>
+
+    <p>Print it, check it off, and you are running.</p>
+
+    <h2>Who This Is For</h2>
+
+    <p>You are a GHL agency owner or operator who:</p>
+
+    <ul>
+      <li>Completed (or plans to complete) the free setup guide</li>
+      <li>Wants tested, ready-to-use configurations instead of writing prompts from scratch</li>
+      <li>Values saving time over figuring everything out yourself</li>
+      <li>Wants access to a private community for questions and support</li>
+    </ul>
+
+    <h2>Pricing</h2>
+
+    <p class="price-tag"><span class="old-price">$197</span> $97</p>
+    <p style="margin-top:4px;color:var(--text-muted)">Launch Special. One payment. Lifetime access. All future updates included.</p>
+
+    <h2>What People Ask</h2>
+
+    <p><strong>Do I need to be technical to use this?</strong><br>No. If you completed the free setup guide, you have all the skills you need. The agent configs are copy-paste. The prompts are fill-in-the-blank.</p>
+
+    <p><strong>Does this work with any GHL account?</strong><br>Yes. It works with any GoHighLevel account that has admin access and the ability to create Private Integrations. That includes Agency and Sub-Account plans.</p>
+
+    <p><strong>What if it does not work for me?</strong><br>Message us in the community. We will walk through the setup with you and make sure it works. If we cannot get it running, we will make it right.</p>
+
+    <p><strong>Is this a subscription?</strong><br>No. One payment, lifetime access. You also get every future update to the prompt library and agent configs at no extra cost.</p>
+
+    <p><strong>Can I use this for my clients' GHL accounts?</strong><br>Yes. Create a separate Private Integration Token for each client account and use the same agent configs with their details filled in.</p>
+
+    <h2>Get the Pack</h2>
+
+    <p><a href="https://skool.com/claude-academy/paid" class="btn-primary" target="_blank" rel="noopener">Get the $97 Agent Pack</a></p>
+
+    <p style="margin-top:12px;color:var(--text-muted)">You get instant access after purchase through the Claude Academy paid community on Skool.</p>
+
+
+    <div class="cta-box">
+      <h2>Want the done-for-you version?</h2>
+      <p>This guide shows you how to set it up yourself.</p>
+      <p>The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.</p>
+      <div class="cta-links">
+        <a href="https://skool.com/claude-academy" class="btn-secondary" target="_blank" rel="noopener">Join Claude Academy Free</a>
+        <a href="https://skool.com/claude-academy/paid" class="btn-primary" target="_blank" rel="noopener">Get the $97 Agent Pack</a>
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="community.html">
+        <div class="nav-label">Previous</div>
+        <div class="nav-title">Community</div>
+      </a>
+      <div></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <span>Claude Academy - GHL Agent Guide</span>
+  <a href="https://youtube.com/@claudeacademy" target="_blank" rel="noopener">YouTube</a>
+</footer>
+
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.querySelector('.sidebar-overlay').classList.toggle('open');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step 2: Find Your Location ID - Claude Academy</title>
+  <meta name="description" content="Grab your GHL Location ID. You will need it for the connection config.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a href="index.html" class="topbar-brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      Claude Academy
+    </a>
+  </div>
+  <div class="topbar-right">
+    <a href="https://skool.com/claude-academy" class="topbar-link" target="_blank" rel="noopener">Community</a>
+    <a href="https://skool.com/claude-academy/paid" class="topbar-cta" target="_blank" rel="noopener">Get the $97 Pack</a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar" id="sidebar">
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Start Here</div>
+    <a href="index.html" class="sidebar-link" data-page="index">Welcome</a>
+    <a href="quickstart.html" class="sidebar-link" data-page="quickstart">Quickstart</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Understand the Setup</div>
+    <a href="what-is-mcp.html" class="sidebar-link" data-page="what-is-mcp">What is MCP?</a>
+    <a href="ghl-agent.html" class="sidebar-link" data-page="ghl-agent">What Claude Can Do in GHL</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Step-by-Step Setup</div>
+    <a href="step-1-pit.html" class="sidebar-link" data-page="step-1-pit">Step 1: Create Your PIT Token</a>
+    <a href="step-2-location.html" class="sidebar-link active" data-page="step-2-location">Step 2: Find Your Location ID</a>
+    <a href="step-3-connect.html" class="sidebar-link" data-page="step-3-connect">Step 3: Connect Claude to GHL</a>
+    <a href="step-4-test.html" class="sidebar-link" data-page="step-4-test">Step 4: Run Your First Test</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Use Cases</div>
+    <a href="lead-qualifier.html" class="sidebar-link" data-page="lead-qualifier">Lead Qualifier</a>
+    <a href="follow-up.html" class="sidebar-link" data-page="follow-up">Follow-Up Writer</a>
+    <a href="pipeline-mover.html" class="sidebar-link" data-page="pipeline-mover">Pipeline Manager</a>
+    <a href="appointment.html" class="sidebar-link" data-page="appointment">Appointment Setter</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Join the Community</div>
+    <a href="community.html" class="sidebar-link" data-page="community">Community</a>
+    <a href="paid-pack.html" class="sidebar-link" data-page="paid-pack">The $97 Agent Pack</a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="content">
+
+
+    <h1>Step 2: Find Your Location ID</h1>
+
+    <p>Your Location ID tells Claude which GHL account (or sub-account) to connect to. There are two easy ways to find it.</p>
+
+    <p>This takes about 1 minute.</p>
+
+    <h2>Method 1: Settings Page (Recommended)</h2>
+
+    <ol>
+      <li>Log in to your GoHighLevel account</li>
+      <li>Click <strong>Settings</strong> in the left sidebar</li>
+      <li>Click <strong>Company</strong> (or <strong>Business Info</strong> depending on your account type)</li>
+      <li>Look for the <strong>Location ID</strong> field on that page</li>
+    </ol>
+
+    <p><strong>What you should see:</strong> A string of letters and numbers, something like <code>abc123DEF456ghi789</code>.</p>
+
+    <h2>Method 2: URL Bar</h2>
+
+    <p>If you cannot find it in settings, check your browser URL bar.</p>
+
+    <ol>
+      <li>Log in to GHL and go to any page in your account</li>
+      <li>Look at the URL in your browser address bar</li>
+      <li>Find the section that says <code>/location/</code></li>
+      <li>The string right after <code>/location/</code> is your Location ID</li>
+    </ol>
+
+    <p><strong>Example URL:</strong></p>
+
+    <pre><code>https://app.gohighlevel.com/location/abc123DEF456ghi789/dashboard</code></pre>
+
+    <p>In this example, your Location ID is <code>abc123DEF456ghi789</code>.</p>
+
+    <p><strong>What you should see:</strong> A string of characters between <code>/location/</code> and the next <code>/</code> in your URL.</p>
+
+    <h2>Save Your Location ID</h2>
+
+    <p>Copy your Location ID and save it alongside your PIT token from Step 1. You will need both in the next step.</p>
+
+    <p>You should now have two pieces of information saved:</p>
+
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Example</th><th>Where You Got It</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PIT Token</td><td><code>pit-abc123...</code> (long string)</td><td>Step 1: Private Integrations</td></tr>
+        <tr><td>Location ID</td><td><code>abc123DEF456ghi789</code></td><td>Settings or URL bar</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Which Location to Use</h2>
+
+    <p>If you manage multiple sub-accounts in GHL, use the Location ID for the specific account you want Claude to access.</p>
+
+    <p>You can always set up additional connections later for other locations. Start with one.</p>
+
+    <h2>Next Step</h2>
+
+    <p>You have your token and your Location ID. Time to connect Claude.</p>
+
+
+    <div class="cta-box">
+      <h2>Want the done-for-you version?</h2>
+      <p>This guide shows you how to set it up yourself.</p>
+      <p>The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.</p>
+      <div class="cta-links">
+        <a href="https://skool.com/claude-academy" class="btn-secondary" target="_blank" rel="noopener">Join Claude Academy Free</a>
+        <a href="https://skool.com/claude-academy/paid" class="btn-primary" target="_blank" rel="noopener">Get the $97 Agent Pack</a>
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="step-1-pit.html">
+        <div class="nav-label">Previous</div>
+        <div class="nav-title">Step 1: Create Your PIT Token</div>
+      </a>
+      <a href="step-3-connect.html" class="next">
+        <div class="nav-label">Next</div>
+        <div class="nav-title">Step 3: Connect Claude to GHL</div>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <span>Claude Academy - GHL Agent Guide</span>
+  <a href="https://youtube.com/@claudeacademy" target="_blank" rel="noopener">YouTube</a>
+</footer>
+
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.querySelector('.sidebar-overlay').classList.toggle('open');
+}
+</script>
+</body>
+</html>

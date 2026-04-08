@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quickstart: 15-Minute Setup - Claude Academy</title>
+  <meta name="description" content="Connect Claude to your GoHighLevel account in 15 minutes flat.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a href="index.html" class="topbar-brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      Claude Academy
+    </a>
+  </div>
+  <div class="topbar-right">
+    <a href="https://skool.com/claude-academy" class="topbar-link" target="_blank" rel="noopener">Community</a>
+    <a href="https://skool.com/claude-academy/paid" class="topbar-cta" target="_blank" rel="noopener">Get the $97 Pack</a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar" id="sidebar">
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Start Here</div>
+    <a href="index.html" class="sidebar-link" data-page="index">Welcome</a>
+    <a href="quickstart.html" class="sidebar-link active" data-page="quickstart">Quickstart</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Understand the Setup</div>
+    <a href="what-is-mcp.html" class="sidebar-link" data-page="what-is-mcp">What is MCP?</a>
+    <a href="ghl-agent.html" class="sidebar-link" data-page="ghl-agent">What Claude Can Do in GHL</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Step-by-Step Setup</div>
+    <a href="step-1-pit.html" class="sidebar-link" data-page="step-1-pit">Step 1: Create Your PIT Token</a>
+    <a href="step-2-location.html" class="sidebar-link" data-page="step-2-location">Step 2: Find Your Location ID</a>
+    <a href="step-3-connect.html" class="sidebar-link" data-page="step-3-connect">Step 3: Connect Claude to GHL</a>
+    <a href="step-4-test.html" class="sidebar-link" data-page="step-4-test">Step 4: Run Your First Test</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Use Cases</div>
+    <a href="lead-qualifier.html" class="sidebar-link" data-page="lead-qualifier">Lead Qualifier</a>
+    <a href="follow-up.html" class="sidebar-link" data-page="follow-up">Follow-Up Writer</a>
+    <a href="pipeline-mover.html" class="sidebar-link" data-page="pipeline-mover">Pipeline Manager</a>
+    <a href="appointment.html" class="sidebar-link" data-page="appointment">Appointment Setter</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Join the Community</div>
+    <a href="community.html" class="sidebar-link" data-page="community">Community</a>
+    <a href="paid-pack.html" class="sidebar-link" data-page="paid-pack">The $97 Agent Pack</a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="content">
+
+
+    <h1>Quickstart: Connect Claude to GHL in 15 Minutes</h1>
+
+    <p>This is the condensed version. Each step links to a detailed page if you get stuck.</p>
+
+    <h2>Prerequisites</h2>
+
+    <p>Before you start, make sure you have:</p>
+    <ul>
+      <li>A GoHighLevel account with admin access</li>
+      <li>Claude Desktop or Claude Code installed on your computer</li>
+      <li>15 minutes of uninterrupted time</li>
+    </ul>
+
+    <h2>Step 1: Create Your Private Integration Token</h2>
+
+    <p>Open your GHL account and navigate to <strong>Settings &gt; Integrations &gt; Private Integrations</strong>.</p>
+
+    <p>Click <strong>Create New</strong>. Name it <code>MCP Server Integration</code>. Leave the webhook field blank.</p>
+
+    <p>Select these scopes:</p>
+
+    <ul>
+      <li><code>contacts.readonly</code> and <code>contacts.write</code></li>
+      <li><code>conversations.readonly</code> and <code>conversations.write</code></li>
+      <li><code>opportunities.readonly</code> and <code>opportunities.write</code></li>
+      <li><code>calendars.readonly</code> and <code>calendars.write</code></li>
+      <li><code>locations.readonly</code></li>
+      <li><code>workflows.readonly</code></li>
+      <li><code>users.readonly</code></li>
+    </ul>
+
+    <p>Click <strong>Save</strong>, then copy the token immediately. You will not see it again.</p>
+
+    <p><strong>What you should see:</strong> A long string of characters. Save it somewhere safe.</p>
+
+    <p><a href="step-1-pit.html">Detailed walkthrough for Step 1</a></p>
+
+    <h2>Step 2: Find Your Location ID</h2>
+
+    <p>Go to <strong>Settings &gt; Company</strong> (or <strong>Business Info</strong>).</p>
+
+    <p>Your Location ID is displayed on that page. You can also find it in your browser URL bar. It is the string after <code>/location/</code>.</p>
+
+    <p><strong>What you should see:</strong> A string like <code>abc123DEF456</code> in the URL or on the settings page.</p>
+
+    <p><a href="step-2-location.html">Detailed walkthrough for Step 2</a></p>
+
+    <h2>Step 3: Connect Claude to GHL</h2>
+
+    <h3>Option A: Claude Desktop (Easiest)</h3>
+
+    <p>Open PowerShell and run:</p>
+
+    <pre><code>notepad "$env:APPDATA\Claude\claude_desktop_config.json"</code></pre>
+
+    <p>Paste this configuration, replacing the placeholder values with your real token and Location ID:</p>
+
+    <pre><code>{
+  "mcpServers": {
+    "ghl": {
+      "url": "https://services.leadconnectorhq.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer YOUR_PIT_TOKEN_HERE",
+        "locationId": "YOUR_LOCATION_ID_HERE"
+      }
+    }
+  }
+}</code></pre>
+
+    <p>Replace <code>YOUR_PIT_TOKEN_HERE</code> with the token from Step 1. Replace <code>YOUR_LOCATION_ID_HERE</code> with the Location ID from Step 2.</p>
+
+    <p>Save the file. Restart Claude Desktop.</p>
+
+    <p><strong>What you should see:</strong> A small hammer icon in the Claude Desktop chat input area.</p>
+
+    <h3>Option B: Claude Code</h3>
+
+    <p>Create a file called <code>.mcp.json</code> in your project root:</p>
+
+    <pre><code>{
+  "mcpServers": {
+    "ghl": {
+      "url": "https://services.leadconnectorhq.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer YOUR_PIT_TOKEN_HERE",
+        "locationId": "YOUR_LOCATION_ID_HERE"
+      }
+    }
+  }
+}</code></pre>
+
+    <p><strong>What you should see:</strong> Claude Code recognizes the MCP server on next launch.</p>
+
+    <p><a href="step-3-connect.html">Detailed walkthrough for Step 3</a></p>
+
+    <h2>Step 4: Test the Connection</h2>
+
+    <p>Open Claude and type:</p>
+
+    <pre><code>List all contacts in my GoHighLevel account.</code></pre>
+
+    <p><strong>What you should see:</strong> Claude returns a list of contacts from your GHL account. If you see contact names and details, the connection is working.</p>
+
+    <p><a href="step-4-test.html">Detailed walkthrough for Step 4</a></p>
+
+    <h2>You Are Connected</h2>
+
+    <p>That is it. Claude now has direct access to your GHL account.</p>
+
+    <p>Next steps:</p>
+
+    <ul>
+      <li>Try the <a href="lead-qualifier.html">Lead Qualifier</a> prompt to qualify a new lead</li>
+      <li>Try the <a href="follow-up.html">Follow-Up Writer</a> prompt to write personalized messages</li>
+      <li>Try the <a href="pipeline-mover.html">Pipeline Manager</a> to clean up stalled deals</li>
+      <li>Try the <a href="appointment.html">Appointment Setter</a> to book meetings</li>
+    </ul>
+
+
+    <div class="cta-box">
+      <h2>Want the done-for-you version?</h2>
+      <p>This guide shows you how to set it up yourself.</p>
+      <p>The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.</p>
+      <div class="cta-links">
+        <a href="https://skool.com/claude-academy" class="btn-secondary" target="_blank" rel="noopener">Join Claude Academy Free</a>
+        <a href="https://skool.com/claude-academy/paid" class="btn-primary" target="_blank" rel="noopener">Get the $97 Agent Pack</a>
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="index.html">
+        <div class="nav-label">Previous</div>
+        <div class="nav-title">Welcome</div>
+      </a>
+      <a href="what-is-mcp.html" class="next">
+        <div class="nav-label">Next</div>
+        <div class="nav-title">What is MCP?</div>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <span>Claude Academy - GHL Agent Guide</span>
+  <a href="https://youtube.com/@claudeacademy" target="_blank" rel="noopener">YouTube</a>
+</footer>
+
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.querySelector('.sidebar-overlay').classList.toggle('open');
+}
+</script>
+</body>
+</html>

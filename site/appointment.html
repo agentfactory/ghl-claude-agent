@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use Case: Appointment Setter - Claude Academy</title>
+  <meta name="description" content="Have Claude check your calendar and book appointments directly in GHL.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a href="index.html" class="topbar-brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      Claude Academy
+    </a>
+  </div>
+  <div class="topbar-right">
+    <a href="https://skool.com/claude-academy" class="topbar-link" target="_blank" rel="noopener">Community</a>
+    <a href="https://skool.com/claude-academy/paid" class="topbar-cta" target="_blank" rel="noopener">Get the $97 Pack</a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar" id="sidebar">
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Start Here</div>
+    <a href="index.html" class="sidebar-link" data-page="index">Welcome</a>
+    <a href="quickstart.html" class="sidebar-link" data-page="quickstart">Quickstart</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Understand the Setup</div>
+    <a href="what-is-mcp.html" class="sidebar-link" data-page="what-is-mcp">What is MCP?</a>
+    <a href="ghl-agent.html" class="sidebar-link" data-page="ghl-agent">What Claude Can Do in GHL</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Step-by-Step Setup</div>
+    <a href="step-1-pit.html" class="sidebar-link" data-page="step-1-pit">Step 1: Create Your PIT Token</a>
+    <a href="step-2-location.html" class="sidebar-link" data-page="step-2-location">Step 2: Find Your Location ID</a>
+    <a href="step-3-connect.html" class="sidebar-link" data-page="step-3-connect">Step 3: Connect Claude to GHL</a>
+    <a href="step-4-test.html" class="sidebar-link" data-page="step-4-test">Step 4: Run Your First Test</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Use Cases</div>
+    <a href="lead-qualifier.html" class="sidebar-link" data-page="lead-qualifier">Lead Qualifier</a>
+    <a href="follow-up.html" class="sidebar-link" data-page="follow-up">Follow-Up Writer</a>
+    <a href="pipeline-mover.html" class="sidebar-link" data-page="pipeline-mover">Pipeline Manager</a>
+    <a href="appointment.html" class="sidebar-link active" data-page="appointment">Appointment Setter</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Join the Community</div>
+    <a href="community.html" class="sidebar-link" data-page="community">Community</a>
+    <a href="paid-pack.html" class="sidebar-link" data-page="paid-pack">The $97 Agent Pack</a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="content">
+
+
+    <h1>Use Case: Book an Appointment</h1>
+
+    <p>This prompt tells Claude to check your GHL calendar for availability, respond to a booking request, and create the appointment.</p>
+
+    <p><strong>Time saved:</strong> 3 to 5 minutes per booking, and you never have to switch to the calendar tab.</p>
+
+    <h2>What This Does</h2>
+
+    <ol>
+      <li>Claude checks your GHL calendar for open time slots</li>
+      <li>Identifies available windows based on your preferences</li>
+      <li>Books the appointment on the calendar</li>
+      <li>Optionally notifies the contact with the confirmed time</li>
+    </ol>
+
+    <h2>The Prompt</h2>
+
+    <p>Copy this prompt and paste it into Claude. Replace the placeholder values.</p>
+
+    <pre><code>Check my GoHighLevel calendar [CALENDAR NAME] for available
+time slots this week.
+
+I need to book a [DURATION]-minute meeting with the contact
+[CONTACT NAME].
+
+Preferences:
+- Preferred days: [e.g., Tuesday through Thursday]
+- Preferred times: [e.g., afternoon, between 1pm and 4pm]
+- Timezone: [YOUR TIMEZONE, e.g., Eastern, Pacific]
+
+Find the first available slot that matches my preferences
+and book the appointment.
+
+Add a note to the appointment: "[MEETING PURPOSE]"</code></pre>
+
+    <h2>Example Output</h2>
+
+    <p>After running this prompt, Claude might respond with:</p>
+
+    <blockquote style="border-left:3px solid var(--brand);padding:12px 16px;background:#fff8f0;margin-bottom:16px;border-radius:0 6px 6px 0">
+      <p>I checked your "Sales Calls" calendar for this week.</p>
+      <p>Available slots matching your preferences (Tue-Thu, 1pm to 4pm Eastern):</p>
+      <ul>
+        <li>Tuesday, April 8 at 1:30 PM</li>
+        <li>Wednesday, April 9 at 2:00 PM</li>
+        <li>Thursday, April 10 at 1:00 PM</li>
+      </ul>
+      <p>I booked the first available slot: <strong>Tuesday, April 8 at 1:30 PM</strong> for a 30-minute meeting with David Park.</p>
+      <p>Note added: "Discovery call - discuss agency growth plan"</p>
+    </blockquote>
+
+    <h2>Customizing the Prompt</h2>
+
+    <p><strong>Just check availability.</strong> If you do not want to book yet:</p>
+
+    <pre><code>Check my GoHighLevel calendar [CALENDAR NAME] for available
+30-minute slots this week. Show me all options between
+9am and 5pm [TIMEZONE]. Do not book anything yet.</code></pre>
+
+    <p><strong>Respond to a lead.</strong> If a lead asked about booking, have Claude handle the reply:</p>
+
+    <pre><code>The contact [CONTACT NAME] asked about scheduling a call.
+Check my calendar [CALENDAR NAME] for the next 3 available
+30-minute slots this week.
+
+Draft a reply message offering those 3 time slots and
+save it as a draft on the contact record.</code></pre>
+
+    <p><strong>Reschedule an existing appointment.</strong></p>
+
+    <pre><code>Find the appointment with [CONTACT NAME] on my
+[CALENDAR NAME] calendar.
+
+Reschedule it to the next available slot after
+[DATE/TIME]. Add a note explaining the reschedule.</code></pre>
+
+    <p><strong>Cancel an appointment.</strong></p>
+
+    <pre><code>Find and cancel the appointment with [CONTACT NAME] on
+my [CALENDAR NAME] calendar.
+
+Add a note to the contact record: "Appointment canceled
+on [DATE]. Reason: [REASON]."</code></pre>
+
+    <h2>Tips for Better Results</h2>
+
+    <p><strong>Use the exact calendar name.</strong> Check your GHL calendar settings for the precise name. Claude needs an exact match to find the right calendar.</p>
+
+    <p><strong>Specify the timezone every time.</strong> This avoids confusion, especially if your GHL account and your contacts are in different time zones.</p>
+
+    <p><strong>Start with read-only tests.</strong> Try "show me availability" before "book the appointment" to make sure Claude is reading the right calendar.</p>
+
+
+    <div class="cta-box">
+      <h2>Want the done-for-you version?</h2>
+      <p>This guide shows you how to set it up yourself.</p>
+      <p>The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.</p>
+      <div class="cta-links">
+        <a href="https://skool.com/claude-academy" class="btn-secondary" target="_blank" rel="noopener">Join Claude Academy Free</a>
+        <a href="https://skool.com/claude-academy/paid" class="btn-primary" target="_blank" rel="noopener">Get the $97 Agent Pack</a>
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="pipeline-mover.html">
+        <div class="nav-label">Previous</div>
+        <div class="nav-title">Pipeline Manager</div>
+      </a>
+      <a href="community.html" class="next">
+        <div class="nav-label">Next</div>
+        <div class="nav-title">Join the Community</div>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <span>Claude Academy - GHL Agent Guide</span>
+  <a href="https://youtube.com/@claudeacademy" target="_blank" rel="noopener">YouTube</a>
+</footer>
+
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.querySelector('.sidebar-overlay').classList.toggle('open');
+}
+</script>
+</body>
+</html>
