@@ -1,0 +1,30 @@
+{
+  "name": "Claude Academy: GHL Agent Guide",
+  "logo": {
+    "light": "/logo/claude-academy-light.png",
+    "dark": "/logo/claude-academy-dark.png"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#E8671B",
+    "light": "#F59E4F",
+    "dark": "#C45510"
+  },
+  "topbarLinks": [
+    { "name": "Claude Academy", "url": "https://skool.com/claude-academy" }
+  ],
+  "topbarCtaButton": {
+    "name": "Get the $97 Pack",
+    "url": "https://skool.com/claude-academy/paid"
+  },
+  "navigation": [
+    { "group": "Start Here", "pages": ["index", "quickstart"] },
+    { "group": "Understand the Setup", "pages": ["concepts/what-is-mcp", "concepts/ghl-agent"] },
+    { "group": "Step-by-Step Setup", "pages": ["setup/step-1-pit", "setup/step-2-location", "setup/step-3-connect", "setup/step-4-test"] },
+    { "group": "Use Cases", "pages": ["use-cases/lead-qualifier", "use-cases/follow-up", "use-cases/pipeline-mover", "use-cases/appointment"] },
+    { "group": "Join the Community", "pages": ["community", "paid-pack"] }
+  ],
+  "footerSocials": {
+    "youtube": "https://youtube.com/@claudeacademy"
+  }
+}

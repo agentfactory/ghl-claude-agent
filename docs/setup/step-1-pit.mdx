@@ -1,0 +1,99 @@
+---
+title: "Step 1: Create Your PIT Token"
+description: "Generate a Private Integration Token so Claude can access your GHL account."
+---
+
+# Step 1: Create Your Private Integration Token
+
+A Private Integration Token (PIT) is like a secure key that lets Claude access your GHL account. This is the first thing you need to set up.
+
+It takes about 3 minutes.
+
+## Open Private Integrations
+
+1. Log in to your GoHighLevel account
+2. Click **Settings** in the left sidebar
+3. Click **Integrations**
+4. Click **Private Integrations**
+
+**What you should see:** A page listing any existing private integrations. It may be empty if this is your first one.
+
+[SCREENSHOT: GHL Settings > Integrations > Private Integrations page]
+
+## Create a New Integration
+
+1. Click the **Create New** button
+2. In the **Name** field, type: `MCP Server Integration`
+3. Leave the **Webhook URL** field blank
+4. Do not change any other default settings
+
+**What you should see:** A form with a name field, webhook URL field, and a scopes section below.
+
+## Select Your Scopes
+
+Scopes control what Claude is allowed to access. Select these scopes to cover the most common workflows:
+
+| Scope | What It Allows |
+|-------|---------------|
+| `contacts.readonly` | Read contact information |
+| `contacts.write` | Create, update, and tag contacts |
+| `conversations.readonly` | Read message history |
+| `conversations.write` | Send messages and manage threads |
+| `opportunities.readonly` | View pipeline deals |
+| `opportunities.write` | Create deals and move stages |
+| `calendars.readonly` | Check calendar availability |
+| `calendars.write` | Book and manage appointments |
+| `locations.readonly` | Access account/location settings |
+| `workflows.readonly` | View available workflows |
+| `users.readonly` | View team member information |
+
+Find each scope in the list and check the box next to it.
+
+**What you should see:** 11 scopes checked. The rest should remain unchecked.
+
+<Warning>
+  Only enable the scopes listed above. Adding unnecessary scopes gives Claude broader access than needed. You can always add more later.
+</Warning>
+
+[SCREENSHOT: Scopes selection with the 11 recommended scopes checked]
+
+## Save and Copy Your Token
+
+1. Click **Save** at the bottom of the page
+2. Your Private Integration Token appears on screen
+3. **Copy it immediately** and paste it somewhere safe
+
+<Warning>
+  You will only see this token once. If you lose it, you will need to create a new integration. Copy it now and store it in a password manager or secure note.
+</Warning>
+
+**What you should see:** A long string of letters and numbers. This is your PIT token.
+
+[SCREENSHOT: Token display screen after saving the integration]
+
+## Quick Checklist
+
+Before moving on, confirm:
+
+- [ ] Integration named `MCP Server Integration`
+- [ ] 11 scopes selected (contacts, conversations, opportunities, calendars, locations, workflows, users)
+- [ ] Token copied and saved somewhere secure
+- [ ] Webhook URL left blank
+
+## Next Step
+
+You have your token. Now you need your Location ID.
+
+[Continue to Step 2: Find Your Location ID](/setup/step-2-location)
+
+---
+
+## Want the done-for-you version?
+
+This guide shows you how to set it up yourself.
+
+The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.
+
+**[Join Claude Academy free](https://skool.com/claude-academy)** to get this guide plus the resource library.
+
+**[Get the $97 Agent Pack](https://skool.com/claude-academy/paid)** for the complete done-for-you setup.

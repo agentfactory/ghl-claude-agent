@@ -1,0 +1,141 @@
+---
+title: "Quickstart: 15-Minute Setup"
+description: "Connect Claude to your GoHighLevel account in 15 minutes flat."
+---
+
+# Quickstart: Connect Claude to GHL in 15 Minutes
+
+This is the condensed version. Each step links to a detailed page if you get stuck.
+
+## Prerequisites
+
+Before you start, make sure you have:
+
+- A GoHighLevel account with admin access
+- Claude Desktop or Claude Code installed on your computer
+- 15 minutes of uninterrupted time
+
+## Step 1: Create Your Private Integration Token
+
+Open your GHL account and navigate to **Settings > Integrations > Private Integrations**.
+
+Click **Create New**. Name it `MCP Server Integration`. Leave the webhook field blank.
+
+Select these scopes:
+
+- `contacts.readonly` and `contacts.write`
+- `conversations.readonly` and `conversations.write`
+- `opportunities.readonly` and `opportunities.write`
+- `calendars.readonly` and `calendars.write`
+- `locations.readonly`
+- `workflows.readonly`
+- `users.readonly`
+
+Click **Save**, then copy the token immediately. You will not see it again.
+
+**What you should see:** A long string of characters. Save it somewhere safe.
+
+[SCREENSHOT: GHL Private Integrations page showing the token generation screen]
+
+[Detailed walkthrough for Step 1](/setup/step-1-pit)
+
+## Step 2: Find Your Location ID
+
+Go to **Settings > Company** (or **Business Info**).
+
+Your Location ID is displayed on that page. You can also find it in your browser URL bar. It is the string after `/location/`.
+
+**What you should see:** A string like `abc123DEF456` in the URL or on the settings page.
+
+[Detailed walkthrough for Step 2](/setup/step-2-location)
+
+## Step 3: Connect Claude to GHL
+
+### Option A: Claude Desktop (Easiest)
+
+Open PowerShell and run:
+
+```powershell
+notepad "$env:APPDATA\Claude\claude_desktop_config.json"
+```
+
+Paste this configuration, replacing the placeholder values with your real token and Location ID:
+
+```json
+{
+  "mcpServers": {
+    "ghl": {
+      "url": "https://services.leadconnectorhq.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer YOUR_PIT_TOKEN_HERE",
+        "locationId": "YOUR_LOCATION_ID_HERE"
+      }
+    }
+  }
+}
+```
+
+Replace `YOUR_PIT_TOKEN_HERE` with the token from Step 1. Replace `YOUR_LOCATION_ID_HERE` with the Location ID from Step 2.
+
+Save the file. Restart Claude Desktop.
+
+**What you should see:** A small hammer icon in the Claude Desktop chat input area.
+
+[SCREENSHOT: Claude Desktop chat input showing the hammer/tools icon after successful MCP connection]
+
+### Option B: Claude Code
+
+Create a file called `.mcp.json` in your project root:
+
+```json
+{
+  "mcpServers": {
+    "ghl": {
+      "url": "https://services.leadconnectorhq.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer YOUR_PIT_TOKEN_HERE",
+        "locationId": "YOUR_LOCATION_ID_HERE"
+      }
+    }
+  }
+}
+```
+
+**What you should see:** Claude Code recognizes the MCP server on next launch.
+
+[Detailed walkthrough for Step 3](/setup/step-3-connect)
+
+## Step 4: Test the Connection
+
+Open Claude and type:
+
+```
+List all contacts in my GoHighLevel account.
+```
+
+**What you should see:** Claude returns a list of contacts from your GHL account. If you see contact names and details, the connection is working.
+
+[Detailed walkthrough for Step 4](/setup/step-4-test)
+
+## You Are Connected
+
+That is it. Claude now has direct access to your GHL account.
+
+Next steps:
+
+- Try the [Lead Qualifier](/use-cases/lead-qualifier) prompt to qualify a new lead
+- Try the [Follow-Up Writer](/use-cases/follow-up) prompt to write personalized messages
+- Try the [Pipeline Manager](/use-cases/pipeline-mover) to clean up stalled deals
+- Try the [Appointment Setter](/use-cases/appointment) to book meetings
+
+---
+
+## Want the done-for-you version?
+
+This guide shows you how to set it up yourself.
+
+The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.
+
+**[Join Claude Academy free](https://skool.com/claude-academy)** to get this guide plus the resource library.
+
+**[Get the $97 Agent Pack](https://skool.com/claude-academy/paid)** for the complete done-for-you setup.

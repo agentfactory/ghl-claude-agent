@@ -1,0 +1,118 @@
+---
+title: "Use Case: Appointment Setter"
+description: "Have Claude check your calendar and book appointments directly in GHL."
+---
+
+# Use Case: Book an Appointment
+
+This prompt tells Claude to check your GHL calendar for availability, respond to a booking request, and create the appointment.
+
+**Time saved:** 3 to 5 minutes per booking, and you never have to switch to the calendar tab.
+
+## What This Does
+
+1. Claude checks your GHL calendar for open time slots
+2. Identifies available windows based on your preferences
+3. Books the appointment on the calendar
+4. Optionally notifies the contact with the confirmed time
+
+## The Prompt
+
+Copy this prompt and paste it into Claude. Replace the placeholder values.
+
+```
+Check my GoHighLevel calendar [CALENDAR NAME] for available
+time slots this week.
+
+I need to book a [DURATION]-minute meeting with the contact
+[CONTACT NAME].
+
+Preferences:
+- Preferred days: [e.g., Tuesday through Thursday]
+- Preferred times: [e.g., afternoon, between 1pm and 4pm]
+- Timezone: [YOUR TIMEZONE, e.g., Eastern, Pacific]
+
+Find the first available slot that matches my preferences
+and book the appointment.
+
+Add a note to the appointment: "[MEETING PURPOSE]"
+```
+
+## Example Output
+
+After running this prompt, Claude might respond with:
+
+> I checked your "Sales Calls" calendar for this week.
+>
+> Available slots matching your preferences (Tue-Thu,
+> 1pm to 4pm Eastern):
+>
+> - Tuesday, April 8 at 1:30 PM
+> - Wednesday, April 9 at 2:00 PM
+> - Thursday, April 10 at 1:00 PM
+>
+> I booked the first available slot: **Tuesday, April 8 at
+> 1:30 PM** for a 30-minute meeting with David Park.
+>
+> Note added: "Discovery call - discuss agency growth plan"
+
+## Customizing the Prompt
+
+**Just check availability.** If you do not want to book yet, just ask Claude to show open slots:
+
+```
+Check my GoHighLevel calendar [CALENDAR NAME] for available
+30-minute slots this week. Show me all options between
+9am and 5pm [TIMEZONE]. Do not book anything yet.
+```
+
+**Respond to a lead.** If a lead asked about booking, have Claude handle the reply:
+
+```
+The contact [CONTACT NAME] asked about scheduling a call.
+Check my calendar [CALENDAR NAME] for the next 3 available
+30-minute slots this week.
+
+Draft a reply message offering those 3 time slots and
+save it as a draft on the contact record.
+```
+
+**Reschedule an existing appointment.** Move a booking to a new time:
+
+```
+Find the appointment with [CONTACT NAME] on my
+[CALENDAR NAME] calendar.
+
+Reschedule it to the next available slot after
+[DATE/TIME]. Add a note explaining the reschedule.
+```
+
+**Cancel an appointment.** Remove a booking cleanly:
+
+```
+Find and cancel the appointment with [CONTACT NAME] on
+my [CALENDAR NAME] calendar.
+
+Add a note to the contact record: "Appointment canceled
+on [DATE]. Reason: [REASON]."
+```
+
+## Tips for Better Results
+
+**Use the exact calendar name.** Check your GHL calendar settings for the precise name. Claude needs an exact match to find the right calendar.
+
+**Specify the timezone every time.** This avoids confusion, especially if your GHL account and your contacts are in different time zones.
+
+**Start with read-only tests.** Try "show me availability" before "book the appointment" to make sure Claude is reading the right calendar.
+
+---
+
+## Want the done-for-you version?
+
+This guide shows you how to set it up yourself.
+
+The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.
+
+**[Join Claude Academy free](https://skool.com/claude-academy)** to get this guide plus the resource library.
+
+**[Get the $97 Agent Pack](https://skool.com/claude-academy/paid)** for the complete done-for-you setup.

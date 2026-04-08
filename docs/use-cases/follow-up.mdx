@@ -1,0 +1,103 @@
+---
+title: "Use Case: Follow-Up Writer"
+description: "Have Claude draft a personalized follow-up message based on your conversation history in GHL."
+---
+
+# Use Case: Write a Personalized Follow-Up
+
+This prompt tells Claude to pull a contact's conversation history from GHL, understand the context, and write a follow-up message that sounds like you.
+
+**Time saved:** 5 to 15 minutes per message, especially for contacts with long conversation histories.
+
+## What This Does
+
+1. Claude looks up the contact in your GHL account
+2. Reads through their full conversation history
+3. Writes a personalized follow-up that references your last interaction
+4. Matches the tone and style you provide
+5. Saves the message as a draft or sends it (your choice)
+
+## The Prompt
+
+Copy this prompt and paste it into Claude. Replace the placeholder values.
+
+```
+Look up [CONTACT NAME] in my GoHighLevel account and read
+through our full conversation history.
+
+Write a personalized follow-up message based on our last
+interaction. The message should:
+
+- Reference something specific from our conversation
+- Feel natural, not templated
+- Be 2 to 4 sentences long
+- End with a clear next step or question
+
+Match this writing style (here are 2 examples of how I
+normally write follow-ups):
+
+Example 1: "[PASTE A REAL FOLLOW-UP YOU HAVE SENT BEFORE]"
+
+Example 2: "[PASTE ANOTHER EXAMPLE OF YOUR WRITING STYLE]"
+
+Save the message as a draft on the contact record.
+Do not send it yet.
+```
+
+## Example Output
+
+After running this prompt, Claude might respond with:
+
+> I reviewed your conversation history with Mike Davis.
+> Your last message on March 20 asked about his timeline for
+> switching CRM providers. He replied that he was evaluating
+> options through the end of Q1.
+>
+> Here is the follow-up I drafted and saved to his record:
+>
+> "Hey Mike, wanted to check in since you mentioned Q1 was
+> your evaluation window. Have you had a chance to narrow
+> things down? Happy to jump on a quick call this week if
+> it would help move the decision forward."
+
+## Customizing the Prompt
+
+**Change the length.** Ask for "1 sentence" for a quick check-in or "a short paragraph" for more detailed messages.
+
+**Change the tone.** Instead of style examples, you can describe the tone directly: "casual and friendly" or "professional but warm."
+
+**Send immediately.** Replace "Save the message as a draft" with "Send the message" if you want Claude to deliver it right away.
+
+**Batch follow-ups.** Ask Claude to write follow-ups for multiple contacts at once:
+
+```
+Find all contacts in my GoHighLevel account who I have not
+messaged in the last 7 days but who have an open
+opportunity in the Sales Pipeline.
+
+For each one, read our conversation history and draft a
+personalized follow-up. Save each as a draft.
+
+Give me a summary of who you drafted messages for and what
+each message says.
+```
+
+## Tips for Better Results
+
+**Give Claude real examples.** The more examples of your writing style you provide, the better Claude matches your voice. Two or three examples is usually enough.
+
+**Be specific about the next step.** Instead of "end with a CTA," tell Claude exactly what you want: "ask if they are free for a call Thursday."
+
+**Review before sending.** Even with great prompts, always review agent-drafted messages before they go out. Start by saving as drafts until you trust the output.
+
+---
+
+## Want the done-for-you version?
+
+This guide shows you how to set it up yourself.
+
+The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.
+
+**[Join Claude Academy free](https://skool.com/claude-academy)** to get this guide plus the resource library.
+
+**[Get the $97 Agent Pack](https://skool.com/claude-academy/paid)** for the complete done-for-you setup.

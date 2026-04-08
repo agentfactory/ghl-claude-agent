@@ -1,0 +1,97 @@
+---
+title: "Use Case: Lead Qualifier"
+description: "Have Claude assess a new lead and tag them as Hot, Warm, or Cold in your GHL account."
+---
+
+# Use Case: Qualify a New Lead
+
+This prompt tells Claude to pull a new contact from your GHL account, assess their information, tag them based on quality, and add a summary note.
+
+**Time saved:** 5 to 10 minutes per lead, compared to doing it manually.
+
+## What This Does
+
+1. Claude looks up the contact in your GHL account
+2. Reviews their form submission data, tags, and any conversation history
+3. Decides if the lead is Hot, Warm, or Cold based on your criteria
+4. Adds the appropriate tag to the contact
+5. Writes a summary note on the contact record
+
+## The Prompt
+
+Copy this prompt and paste it into Claude. Replace the placeholder values in brackets with your own details.
+
+```
+Look up the contact [CONTACT NAME] in my GoHighLevel account.
+
+Review their profile, form submissions, and any conversation history.
+
+Based on the following criteria, tag them as one of: Hot-Lead, Warm-Lead, or Cold-Lead.
+
+Hot-Lead criteria:
+- They mentioned a specific budget or timeline
+- They responded to a message within 24 hours
+- They match our ideal customer profile: [DESCRIBE YOUR IDEAL CUSTOMER]
+
+Warm-Lead criteria:
+- They filled out a form but have not responded to follow-up
+- They show interest but no urgency
+
+Cold-Lead criteria:
+- No response after initial contact
+- Incomplete information
+- Does not match our ideal customer profile
+
+After tagging, add a note to the contact that summarizes:
+- What information you found
+- Why you chose that tag
+- Suggested next step
+```
+
+## Example Output
+
+After running this prompt, Claude might respond with something like:
+
+> I found Sarah Johnson in your contacts. She submitted a form on March 15 requesting pricing for your agency plan. In her submission, she mentioned a budget of $2,000/month and wants to start within 2 weeks.
+>
+> She replied to your initial outreach within 3 hours.
+>
+> I have tagged her as **Hot-Lead** and added this note to her contact record:
+>
+> "Lead assessment: Hot. Budget confirmed ($2K/mo), timeline confirmed (2 weeks), fast response time (3 hours). Suggested next step: Schedule a discovery call this week."
+
+## Customizing the Prompt
+
+**Change the tag names.** Replace `Hot-Lead`, `Warm-Lead`, and `Cold-Lead` with whatever tags you already use in your GHL account.
+
+**Adjust the criteria.** Swap in your own qualification standards. The more specific you are, the better Claude performs.
+
+**Add more categories.** You can add a fourth tier like `VIP-Lead` or `Not-Qualified` if your sales process uses them.
+
+## Running This on Multiple Leads
+
+You can also ask Claude to qualify several contacts at once:
+
+```
+Look at all contacts tagged "new-lead" in my GoHighLevel account.
+For each one, review their profile and conversation history.
+Tag each as Hot-Lead, Warm-Lead, or Cold-Lead using the criteria above.
+Add a summary note to each contact explaining the rating.
+Give me a summary table when you are done.
+```
+
+<Note>
+  Bulk operations may take longer depending on how many contacts match. GHL rate limits apply. Start with a small batch (10 or fewer) to test.
+</Note>
+
+---
+
+## Want the done-for-you version?
+
+This guide shows you how to set it up yourself.
+
+The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.
+
+**[Join Claude Academy free](https://skool.com/claude-academy)** to get this guide plus the resource library.
+
+**[Get the $97 Agent Pack](https://skool.com/claude-academy/paid)** for the complete done-for-you setup.

@@ -1,0 +1,118 @@
+---
+title: "Use Case: Pipeline Manager"
+description: "Have Claude find stalled deals and move them to the right pipeline stage in GHL."
+---
+
+# Use Case: Manage Your Pipeline
+
+This prompt tells Claude to review your pipeline, find stalled deals, move them to the right stage, and give you a summary report.
+
+**Time saved:** 15 to 30 minutes of pipeline cleanup, done in seconds.
+
+## What This Does
+
+1. Claude checks all deals in a specific pipeline stage
+2. Identifies which ones have not been updated recently
+3. Moves stalled deals to a "Needs Attention" stage
+4. Adds a note to each contact explaining the move
+5. Gives you a summary of everything that changed
+
+## The Prompt
+
+Copy this prompt and paste it into Claude. Replace the placeholder values.
+
+```
+In my GoHighLevel account, look at the pipeline called
+[YOUR PIPELINE NAME].
+
+Find every opportunity in the [STAGE NAME] stage that has
+not been updated in the last [NUMBER] days.
+
+For each stalled opportunity:
+1. Move it to the [TARGET STAGE NAME] stage
+2. Add a note: "Moved by Claude - no activity for
+   [NUMBER] days. Needs follow-up."
+
+When you are done, give me a summary table with:
+- Contact name
+- Days since last activity
+- Previous stage
+- Any notes on the contact record
+```
+
+## Example Output
+
+After running this prompt, Claude might respond with:
+
+> I found 6 opportunities in the "Proposal Sent" stage of
+> your Sales Pipeline. 3 of them have not been updated in
+> over 14 days.
+>
+> I moved them to "Needs Attention" and added notes:
+>
+> | Contact | Days Inactive | Previous Stage | Action Taken |
+> |---------|--------------|----------------|--------------|
+> | Tom Wilson | 18 days | Proposal Sent | Moved, note added |
+> | Lisa Chen | 15 days | Proposal Sent | Moved, note added |
+> | Ray Garcia | 21 days | Proposal Sent | Moved, note added |
+>
+> The remaining 3 opportunities in Proposal Sent were
+> updated within the last 14 days and left in place.
+
+## Customizing the Prompt
+
+**Change the threshold.** Use 3, 7, 14, or 30 days depending on how fast your sales cycle moves.
+
+**Change the pipeline.** Replace the pipeline name with whichever pipeline you want to clean up.
+
+**Skip the move, just report.** If you only want a status report without moving anything, modify the prompt:
+
+```
+In my GoHighLevel account, look at the pipeline called
+[YOUR PIPELINE NAME].
+
+Give me a summary of every stage, showing how many
+opportunities are in each and which contacts have not
+been updated in the last 7 days.
+
+Do not move anything. Just report.
+```
+
+**Add follow-up actions.** Ask Claude to also draft a follow-up message for each stalled contact:
+
+```
+For each stalled opportunity you move, also draft a
+follow-up message to the contact. Save it as a draft.
+Include the draft text in your summary table.
+```
+
+## Weekly Pipeline Review
+
+Set up a habit of running this prompt every Monday morning:
+
+```
+Give me a full pipeline review for [YOUR PIPELINE NAME].
+
+For each stage, show me:
+- How many opportunities are in this stage
+- Total dollar value in this stage
+- How many are stalled (no update in 7+ days)
+- The top 3 highest-value opportunities
+
+Then move any opportunity stalled for 14+ days to
+[TARGET STAGE NAME] and add a note.
+```
+
+This gives you a complete pipeline snapshot in about 30 seconds.
+
+---
+
+## Want the done-for-you version?
+
+This guide shows you how to set it up yourself.
+
+The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.
+
+**[Join Claude Academy free](https://skool.com/claude-academy)** to get this guide plus the resource library.
+
+**[Get the $97 Agent Pack](https://skool.com/claude-academy/paid)** for the complete done-for-you setup.
