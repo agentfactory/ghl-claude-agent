@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use Case: Follow-Up Writer - Claude Academy</title>
+  <meta name="description" content="Have Claude draft a personalized follow-up message based on your conversation history in GHL.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a href="index.html" class="topbar-brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      Claude Academy
+    </a>
+  </div>
+  <div class="topbar-right">
+    <a href="https://skool.com/claude-academy" class="topbar-link" target="_blank" rel="noopener">Community</a>
+    <a href="https://skool.com/claude-academy/paid" class="topbar-cta" target="_blank" rel="noopener">Get the $97 Pack</a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar" id="sidebar">
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Start Here</div>
+    <a href="index.html" class="sidebar-link" data-page="index">Welcome</a>
+    <a href="quickstart.html" class="sidebar-link" data-page="quickstart">Quickstart</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Understand the Setup</div>
+    <a href="what-is-mcp.html" class="sidebar-link" data-page="what-is-mcp">What is MCP?</a>
+    <a href="ghl-agent.html" class="sidebar-link" data-page="ghl-agent">What Claude Can Do in GHL</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Step-by-Step Setup</div>
+    <a href="step-1-pit.html" class="sidebar-link" data-page="step-1-pit">Step 1: Create Your PIT Token</a>
+    <a href="step-2-location.html" class="sidebar-link" data-page="step-2-location">Step 2: Find Your Location ID</a>
+    <a href="step-3-connect.html" class="sidebar-link" data-page="step-3-connect">Step 3: Connect Claude to GHL</a>
+    <a href="step-4-test.html" class="sidebar-link" data-page="step-4-test">Step 4: Run Your First Test</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Use Cases</div>
+    <a href="lead-qualifier.html" class="sidebar-link" data-page="lead-qualifier">Lead Qualifier</a>
+    <a href="follow-up.html" class="sidebar-link active" data-page="follow-up">Follow-Up Writer</a>
+    <a href="pipeline-mover.html" class="sidebar-link" data-page="pipeline-mover">Pipeline Manager</a>
+    <a href="appointment.html" class="sidebar-link" data-page="appointment">Appointment Setter</a>
+  </div>
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">Join the Community</div>
+    <a href="community.html" class="sidebar-link" data-page="community">Community</a>
+    <a href="paid-pack.html" class="sidebar-link" data-page="paid-pack">The $97 Agent Pack</a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="content">
+
+
+    <h1>Use Case: Write a Personalized Follow-Up</h1>
+
+    <p>This prompt tells Claude to pull a contact's conversation history from GHL, understand the context, and write a follow-up message that sounds like you.</p>
+
+    <p><strong>Time saved:</strong> 5 to 15 minutes per message, especially for contacts with long conversation histories.</p>
+
+    <h2>What This Does</h2>
+
+    <ol>
+      <li>Claude looks up the contact in your GHL account</li>
+      <li>Reads through their full conversation history</li>
+      <li>Writes a personalized follow-up that references your last interaction</li>
+      <li>Matches the tone and style you provide</li>
+      <li>Saves the message as a draft or sends it (your choice)</li>
+    </ol>
+
+    <h2>The Prompt</h2>
+
+    <p>Copy this prompt and paste it into Claude. Replace the placeholder values.</p>
+
+    <pre><code>Look up [CONTACT NAME] in my GoHighLevel account and read
+through our full conversation history.
+
+Write a personalized follow-up message based on our last
+interaction. The message should:
+
+- Reference something specific from our conversation
+- Feel natural, not templated
+- Be 2 to 4 sentences long
+- End with a clear next step or question
+
+Match this writing style (here are 2 examples of how I
+normally write follow-ups):
+
+Example 1: "[PASTE A REAL FOLLOW-UP YOU HAVE SENT BEFORE]"
+
+Example 2: "[PASTE ANOTHER EXAMPLE OF YOUR WRITING STYLE]"
+
+Save the message as a draft on the contact record.
+Do not send it yet.</code></pre>
+
+    <h2>Example Output</h2>
+
+    <p>After running this prompt, Claude might respond with:</p>
+
+    <blockquote style="border-left:3px solid var(--brand);padding:12px 16px;background:#fff8f0;margin-bottom:16px;border-radius:0 6px 6px 0">
+      <p>I reviewed your conversation history with Mike Davis. Your last message on March 20 asked about his timeline for switching CRM providers. He replied that he was evaluating options through the end of Q1.</p>
+      <p>Here is the follow-up I drafted and saved to his record:</p>
+      <p>"Hey Mike, wanted to check in since you mentioned Q1 was your evaluation window. Have you had a chance to narrow things down? Happy to jump on a quick call this week if it would help move the decision forward."</p>
+    </blockquote>
+
+    <h2>Customizing the Prompt</h2>
+
+    <p><strong>Change the length.</strong> Ask for "1 sentence" for a quick check-in or "a short paragraph" for more detailed messages.</p>
+
+    <p><strong>Change the tone.</strong> Instead of style examples, you can describe the tone directly: "casual and friendly" or "professional but warm."</p>
+
+    <p><strong>Send immediately.</strong> Replace "Save the message as a draft" with "Send the message" if you want Claude to deliver it right away.</p>
+
+    <p><strong>Batch follow-ups.</strong> Ask Claude to write follow-ups for multiple contacts at once:</p>
+
+    <pre><code>Find all contacts in my GoHighLevel account who I have not
+messaged in the last 7 days but who have an open
+opportunity in the Sales Pipeline.
+
+For each one, read our conversation history and draft a
+personalized follow-up. Save each as a draft.
+
+Give me a summary of who you drafted messages for and what
+each message says.</code></pre>
+
+    <h2>Tips for Better Results</h2>
+
+    <p><strong>Give Claude real examples.</strong> The more examples of your writing style you provide, the better Claude matches your voice. Two or three examples is usually enough.</p>
+
+    <p><strong>Be specific about the next step.</strong> Instead of "end with a CTA," tell Claude exactly what you want: "ask if they are free for a call Thursday."</p>
+
+    <p><strong>Review before sending.</strong> Even with great prompts, always review agent-drafted messages before they go out. Start by saving as drafts until you trust the output.</p>
+
+
+    <div class="cta-box">
+      <h2>Want the done-for-you version?</h2>
+      <p>This guide shows you how to set it up yourself.</p>
+      <p>The Claude Academy Agent Pack includes pre-built agent configs, tested prompts for 4 common GHL workflows, and a private community. Everything ready to go.</p>
+      <div class="cta-links">
+        <a href="https://skool.com/claude-academy" class="btn-secondary" target="_blank" rel="noopener">Join Claude Academy Free</a>
+        <a href="https://skool.com/claude-academy/paid" class="btn-primary" target="_blank" rel="noopener">Get the $97 Agent Pack</a>
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="lead-qualifier.html">
+        <div class="nav-label">Previous</div>
+        <div class="nav-title">Lead Qualifier</div>
+      </a>
+      <a href="pipeline-mover.html" class="next">
+        <div class="nav-label">Next</div>
+        <div class="nav-title">Pipeline Manager</div>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <span>Claude Academy - GHL Agent Guide</span>
+  <a href="https://youtube.com/@claudeacademy" target="_blank" rel="noopener">YouTube</a>
+</footer>
+
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.querySelector('.sidebar-overlay').classList.toggle('open');
+}
+</script>
+</body>
+</html>
